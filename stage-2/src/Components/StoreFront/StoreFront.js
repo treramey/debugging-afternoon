@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './StoreFront.css';
+import React, { Component } from "react";
+import "./StoreFront.css";
 
 class StoreFront extends Component {
   render() {
@@ -10,14 +10,13 @@ class StoreFront extends Component {
           <img src={element.image} alt="" />
           <h2>{element.desc}</h2>
           <h3>{"$" + element.price + ".00"}</h3>
-          <button onClick={() => this.props.addToCart(element)}>Purchase!</button>
+          <button onClick={() => this.props.addToCart(element)}>
+            Purchase!
+          </button>
         </div>
-      )
-    })
-    return (
-      <div className="storefront-container">
-      </div>
-    )
+      );
+    });
+    return <div className="storefront-container">{productDisplay}</div>;
   }
 }
 
